@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Project</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Food Project</h1>
+    </header>
+
+    <main>
+        <h1>Restaurants</h1>
+        <ul class="restaurants">
+            <% restaurants.forEach(function(data) { %>
+                <li class="restaurants-item">
+                    <img src="<%= data.imageURL %>" class="restaurants-item-image" alt="<%= data.name %>" />
+                    <div class="restaurants-item-name">
+                        <%= data.name %>
+                    </div>
+                    <div class="restaurants-item-type">ประเภท: <%= data.type %>
+                    </div>
+                </li>
+                <% }); %>
+        </ul>
+    </main>
+</body>
+
+</html>
